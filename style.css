@@ -1,0 +1,477 @@
+body {
+	background-color:#E5E5E5;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#dark {
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	display:block;
+	z-index:2;
+	background-color:rgba(0,0,0,0.8);
+}
+
+.settings {
+	width:256px;
+	position:fixed;
+	top:8%;
+	display:block;
+	z-index:3 !important;
+}
+
+#settings {
+	height:800px;
+	position:fixed;
+	left:8%;
+	height:auto;
+}
+
+#add {
+	height:auto;
+	position:fixed;
+	left:16%;
+}
+
+#avatar {
+	width:64px;
+	height:64px;
+	padding:0px;
+	position:relative;
+	left:-16;
+	top:-16;
+}
+
+.buttonInput {
+	height:32px;
+	border:1px;
+	background-color:#C0C0C0;
+	border-style:solid;
+	border-color:#999999;
+	outline: none;
+	margin:0px;
+	display:inline-block;
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:20px;
+}
+
+.buttonInput:hover {
+	border-color:#000000;
+	background-color:#999999;
+	transition: all .25s ease;
+}
+
+#addButton {
+	margin-top:4px;
+	margin-bottom:4px;
+}
+
+#settingsButton {
+	margin-top:4px;
+	margin-bottom:4px;
+	margin-right:4px;
+}
+
+.sliderMarker:hover {
+	background-color:#E5E5E5;
+}
+
+.textInput:hover {
+	border-color:#000000;
+	transition: all .25s ease;
+}
+
+.settingsX:hover {
+	background-color:#E5E5E5;	
+	transition: all .25s ease;
+}
+
+.settingsX {
+	display:block;
+	position:absolute;
+	right:0px;
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:28px;
+	background-color:#999999;
+	overflow:hidden;
+	text-align:center;
+	vertical-align:middle;
+	width:32px;
+	height:32px;
+}
+
+.slider {
+	display:block;
+	width:256px;
+	height:32px;
+	background-color:#999999;
+}
+
+.sliderText {
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:20px;-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.sliderContainer {
+	display:block;
+}
+
+.dropDownMenu {
+	width:32px;
+	height:32px;
+	padding:4px;
+}
+
+.dropDownMenuList {	
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	background-color:#C0C0C0;
+	border-color:#999999;
+	border-style:solid;
+	border:1px;
+	display:block;
+	width:256px;
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:20px;
+}
+
+.dropDownMenuText {
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:20px;
+	display:block;
+	background-color:#999999;
+	width:256px;
+}
+
+.settingsText {
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:32px;
+	margin:0px;
+}
+
+.sliderMarker {
+	position:relative;
+	display:block;
+	width:32px;
+	height:32px;
+	background-color:#C0C0C0;
+	position:relative;
+	left:112px;
+}
+
+.checkboxInput {
+	height:30px;
+	width:30px;
+	border:1px;
+	border-style:solid;
+	border-color:#000000;
+	background-color:#999999;
+	display:inline-block;
+}
+
+.checkboxInput:hover {
+	background-color:#c0c0c0;
+	transition: all .25s ease;
+}
+
+.checkboxContainer input[type=checkbox]:checked  + label .checkboxInput{
+	background-color:#e5e5e5;
+}
+
+.checkboxContainer input[type=checkbox]:checked  + label .checkboxInput:hover{
+	background-color:#c0c0c0;
+}
+
+.checkboxContainer {
+	height:32px;
+	display:inline-block;
+	margin-top:4px;
+	vertical-align:middle;
+}
+
+.checkBoxLabel {	
+	position:relative;
+	top:-10;
+	vertical-align:middle;
+	margin-top:auto;
+	margin-bottom:auto;
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:18px;
+	margin-left:4px;
+	display:inline-block;
+}
+
+.checkboxContainer label {
+	display:inline-block;
+	height:32px;
+	vertical-align:middle;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+input[type=checkbox] {
+	display:none;
+	visibility: hidden;
+}
+
+.textInput {
+	width:256px;
+	height:32px;
+	border:1px;
+	border-style:solid;
+	border-color:#999999;
+	outline: none;
+	margin:0px;
+	display:inline-block;
+}
+
+.cardSearch {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	width:100% !important; 
+	height:32px !important;
+	display:block;
+	padding:0;
+	margin:0;
+}
+
+#header {
+	height:auto;
+	display:block;
+}
+
+.cardForm {	
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	display:block;
+	height:96px;
+	width:256px;
+}
+
+.cardFormSmall {
+	height:64px;
+	width:128px;
+}
+
+.cardForm:hover {
+	display:block;
+	background: rgba(0,0,0,0.4);
+	transition: all .25s ease;
+}
+
+.cardForm.textInput .ui-effects-wrapper {
+	position:absolute;
+	left:0;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	width:256px;
+	height:32px;
+}
+
+.card {
+	background-color:#ffffff;
+	height:352px;
+	width:256px;
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px 0px;
+	display:inline-block;
+	margin:16px;
+	margin-bottom:20px;
+	overflow:hidden;
+	vertical-align: top;
+	position:relative;
+	border-radius:2px;
+}
+
+.card.ui-draggable-dragging {	
+	z-index:1;
+}
+
+.cardImageDark {
+	display:block;
+	height:256px;
+	width:256px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.cardImageDark:hover {
+	transition: all .25s ease;
+	background: rgba(0,0,0,0.4);
+}
+
+.cardImageDark.dragHover {
+	transition: all .25s ease;
+	background: rgba(0,0,0,0.4);
+}
+
+.contextMenuList {
+	text-decoration:none;
+	list-style:none;
+	padding:0;
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:32px;
+	display:block;
+	width:auto !important;
+	height:auto !important;
+	position:absolute !important;
+	top:0;
+	left:0;
+}
+
+.background {
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+.ui-effects-wrapper .contextMenuList{
+	display:block;
+}
+
+.contextMenuListEntry {
+	display:block;
+	padding-left:16px;
+	padding-right:16px;
+	width:256px;
+}
+
+.contextMenuListEntry:hover {
+	background-color:#C0C0C0;
+	transition: all .25s ease;
+}
+
+#cards .ui-effects-wrapper{
+	display:inline-block;
+}
+
+.cardSmall {
+	width:128px;	
+	height:192px;
+	margin:8px;
+}
+
+.cardImageDarkSmall {
+	display:block;
+	height:128px;
+	width:128px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+#cards {
+	display:block;
+}
+
+.cardImage {
+	position:relative;
+	left:0px;
+	height:256px;
+	display:block;
+	margin-top:auto;
+	margin-bottom:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+.cardImageSmall {
+	height:128px;
+}
+
+.cardText {
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:32px;
+	display:block;
+	text-align:center;
+	background-color:#ffffff;
+	height:96px;
+	position:absolute;
+	top:256px;
+	width:256px;
+}
+
+.cardTextSmall {
+	font-size:20px;
+	height:64px;
+	position:absolute;
+	top:128px;
+	width:128px;
+}
+
+.title {
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:32px;
+	height:32px;
+	width:auto;
+	padding:16px;
+}
+
+#titleText {
+	vertical-align:top;
+}
+
+.card.title.icon:hover {
+	transition: all .25s ease;
+	background-color:#E5E5E5;
+}
+
+#name {	
+	vertical-align:top;
+	display:inline-block;
+}
+
+#settingsIcon {
+	width:32px;
+	height:32px;
+}
+
+#settingsHeader {
+	width:100%;
+	height:32px;
+	display:inline-block;
+	background-color:#999999;
+}
+
+form {
+	margin:0px;
+}
+
+.launch {
+	font-family: Roboto, Segoe UI, Arial;
+	font-size:48px;
+	display:block;
+	text-align:center;
+	background-color:#ffffff;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:2;
+}
+
+.launchImage {
+	margin-top:10%;
+}

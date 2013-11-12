@@ -1,0 +1,109 @@
+<!--ToDo
+Widgets
+-->
+
+<!--Bug List
+????Droppable hover beim Papierkorb
+-->
+
+<html>
+	<head>
+		<link href="flick/jquery-ui-1.10.3.custom.min.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="jquery-2.0.3.min.js"> </script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="script.js"></script>
+		<script src="jquery-ui-1.10.3.custom.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="normalize.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>NewTab</title>
+	<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>
+	</head>
+	<body onload="start();">
+		
+		<span class="background"></span>
+		
+		<span id="header">
+			<span class="card title" ><img id="avatar" src=""/>
+				<span id="titleText">Hi <span id="name"></span>!</span>
+			</span>
+			<span class="card title icon" onclick="toggleSettings();">
+				<img id="settingsIcon" src="gear.png"/>
+			</span>
+			<span class="card title icon" onclick="toggleAdd('');">
+				<img id="settingsIcon" src="plus.png"/>
+			</span>
+		</span>
+		<span id="cards"></span>
+	
+		<span id="dark" style="display:none;"></span>
+		<span class="card settings" id="settings" style="display:none;">
+			<span id="settingsHeader"><span class="settingsX" onclick="toggleSettings();">X</span></span>
+			
+			<form>
+			<span class="settingsText">Effect</span>
+			<select class="dropDownMenuList" id="effectDropDownMenuList">
+				<option>Blind</option>
+				<option>Bounce</option>
+				<option>Clip</option>
+				<option>Drop</option>
+				<option>Explode</option>
+				<option>Fade</option>
+				<option>Fold</option>
+				<option>Highlight</option>
+				<option>Puff</option>
+				<option>Pulsate</option>
+				<option>Scale</option>
+				<option>Shake</option>
+				<option>Size</option>
+				<option>Slide</option>
+				<option>Transfer</option>
+			</select>
+			
+			<span class="settingsText">Effect Duration<span id="sliderValue"></span></span>
+			<span class="sliderContainer">
+				<span id="effectSpeedSlider" class="slider">
+					<span class="sliderMarker"></span>
+				</span>
+				<span class="sliderText">-1 BUG ERROR</span>
+			</span>
+			<span class="settingsText">Your Name</span><br>
+			<input type="text" id="nameInput" class="textInput" value="User"/><br>
+			<span class="settingsText">Avatar</span><br>
+			<input type="text" id="avatarInput" class="textInput"/><br>
+			<span class="checkboxContainer"><input type="checkbox" id="smallCheckbox" name="small"/><label for="smallCheckbox"><span class="checkboxInput"></span><span class="checkBoxLabel">Smaller Cards</span></label></span><br>
+			<input type="button" id="settingsButton" class="buttonInput" value="Set" onclick="setSettings();toggleSettings();"/> <input type="button" id="settingsButton" class="buttonInput" value="Reset" onclick="rebuild(); buildPage(); save();"/>
+			</form>
+		</span>
+		
+		<span class="card settings" id="add" style="display:none;">
+			<span id="settingsHeader"><span class="settingsX" onclick="toggleAdd('');">X</span></span>
+			
+			<form>
+				<span class="settingsText">Name</span><br>
+				<input type="text" id="addNameInput" class="textInput"/><br>
+				<span class="settingsText">Icon</span><br>
+				<input type="text" id="addIconInput" class="textInput"/><br>
+				<span class="settingsText">Link</span><br>
+				<input type="text" id="addLinkInput" class="textInput"/><br>
+				<span class="settingsText">Search URL (optional)</span><br>
+				<input type="text" id="addSearchInput" class="textInput"/><br>
+				<span class="settingsText">Search Seperator (optional)</span><br>
+				<input type="text" id="addSearchSeperatorInput" class="textInput"/><br>
+				<input type="button" id="addButton" class="buttonInput" onclick="add();" value="Add"/>
+			</form>
+		</span>
+<!--
+		<ul class="card contextMenuList" id="contextMenu" >
+			<li class="contextMenuListEntry" onclick="launchCard()">Open in new tab</li>
+			<li class="contextMenuListEntry" >Edit</li>
+			<li class="contextMenuListEntry">Delete</li>
+		</ul>
+		-->
+	</body>
+</html>
+
+<!--
+	102 lines HTML
+	419 lines JS
+	477 lines CSS
+-->
