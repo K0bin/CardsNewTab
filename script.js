@@ -135,6 +135,7 @@ function removeCard(index) {
 		$("#c"+_i.toString()).attr("id","c"+(_i-1).toString());
 		setCard(_i-1);
 	}
+	save();
 }
 
 function getSliderValue(element) {
