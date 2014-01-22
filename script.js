@@ -409,8 +409,22 @@ function rebuild() {
 }
 
 function showContextMenu(element, e) {
-	hideContextMenu();
-	
+	if($(".contextMenuList").length == 0) {
+		appendContextMenu(element, e);
+	} else {
+		reopenContextMenu(element, e);
+	}	
+}
+
+function hideContextMenu() {
+	$(".contextMenuList").each(function () {$(this).hide("slide",{direction:"up"},effectSpeed/4,function() {$(this).remove(); });});
+}
+
+function reopenContextMenu(element, e) {
+	$(".contextMenuList").each(function () {$(this).hide("slide",{direction:"up"},effectSpeed/4,function() {$(this).remove(); appendContextMenu(element, e);});});
+}
+
+function appendContextMenu(element, e) {
 	var _id=element.attr("id").substr(1);
 	var _ctxId="cm"+_id.toString();
 	var _append="<ul style=\"display:none;\" class=\"card contextMenuList\" id=\""+_ctxId+"\" ><li class=\"contextMenuListEntry\" onclick=\"launchCard("+_id.toString()+",true);hideContextMenu();\">Open in new tab</li><li class=\"contextMenuListEntry\" onclick=\"toggleAdd("+_id.toString()+");hideContextMenu();\">Edit</li><li class=\"contextMenuListEntry\" onclick=\"removeCard("+_id.toString()+");hideContextMenu();\">Delete</li></ul>";
@@ -419,8 +433,4 @@ function showContextMenu(element, e) {
 	$("#"+_ctxId).css("left",e.pageX);
 	$("#"+_ctxId).css("top",e.pageY);
 	$("#"+_ctxId).show("slide",{direction:"up"},effectSpeed/4);
-}
-
-function hideContextMenu() {
-	$(".contextMenuList").each(function () {$(this).hide("slide",{direction:"up"},effectSpeed/4,function() {$(this).remove();})});
 }
