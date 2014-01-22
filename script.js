@@ -65,12 +65,6 @@ function setSettings() {
 		}
 	}
 	save();
-	/*
-		_class="card cardSmall";
-		_imgClass="cardImage cardImageSmall";
-		_imgDarkClass="cardImageDark cardImageDarkSmall";
-		_textClass="cardText cardTextSmall";
-		_search="<form class=\"cardForm cardFormSmall\"><input type=\"text\" class=\"textInput cardSearch\" style=\"display:none;\"/></form>";*/
 }
 
 function handleDropEvent( event, ui ) {
@@ -135,7 +129,6 @@ function removeCard(index) {
 		$("#c"+_i.toString()).attr("id","c"+(_i-1).toString());
 		setCard(_i-1);
 	}
-	save();
 }
 
 function getSliderValue(element) {
@@ -343,6 +336,7 @@ function add() {
 }
 
 function save() {
+	console.log("Saving");
 	localStorage.clear();
 	localStorage.setItem("effect",effect);
 	localStorage.setItem("effectSpeed",effectSpeed.toString());
@@ -428,7 +422,7 @@ function reopenContextMenu(element, e) {
 function appendContextMenu(element, e) {
 	var _id=element.attr("id").substr(1);
 	var _ctxId="cm"+_id.toString();
-	var _append="<ul style=\"display:none;\" class=\"card contextMenuList\" id=\""+_ctxId+"\" ><li class=\"contextMenuListEntry\" onclick=\"launchCard("+_id.toString()+",true);hideContextMenu();\">Open in new tab</li><li class=\"contextMenuListEntry\" onclick=\"toggleAdd("+_id.toString()+");hideContextMenu();\">Edit</li><li class=\"contextMenuListEntry\" onclick=\"removeCard("+_id.toString()+");hideContextMenu();\">Delete</li></ul>";
+	var _append="<ul style=\"display:none;\" class=\"card contextMenuList\" id=\""+_ctxId+"\" ><li class=\"contextMenuListEntry\" onclick=\"launchCard("+_id.toString()+",true);hideContextMenu();\">Open in new tab</li><li class=\"contextMenuListEntry\" onclick=\"toggleAdd("+_id.toString()+");hideContextMenu();\">Edit</li><li class=\"contextMenuListEntry\" onclick=\"removeCard("+_id.toString()+");save();hideContextMenu();\">Delete</li></ul>";
 	
 	$("body").append(_append);
 	$("#"+_ctxId).css("left",e.pageX);
