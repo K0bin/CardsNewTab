@@ -7,4 +7,4 @@ If anyone actually wants to use it:
 https://rawgithub.com/Rhedox/CardsNewTab/master/index.htm
 
 I won't continue it.
-In it's current form the page is a bit buggy and the code is qwful. Please don't look into it.
+In it's current state the page is a bit buggy and the code is awful. Please don't look into it. .__.
